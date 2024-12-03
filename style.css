@@ -1,0 +1,126 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #181818;
+    color: #f1f1f1;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    width: 100%;
+    background-color: #333333;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header button {
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #45a049;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+.left-column {
+    width: 70%;
+    padding: 20px;
+}
+
+.right-column {
+    width: 30%;
+    height: 100vh;
+    padding: 20px;
+    background-color: #292929;
+    border-left: 2px solid #444444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.right-column iframe {
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button, form select {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #444444;
+    color: white;
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    border-bottom: 1px solid #555555;
+    padding-bottom: 5px;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: goldenrod;
+}
+
+.green {
+    color: green;
+}
+
+/* Banner Styling */
+.banner {
+    background-color: #4a4d4a;
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* No Dark Mode Toggle Styling Needed - Already Default */
