@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <header>
+        <h1 id="totalAmount">Total: ₹0</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+    <main>
+        <section class="left-column">
+            <h2 class="banner">Add Expense</h2>
+            <form id="expenseForm">
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="flag">
+                    <option value="red">Red (High)</option>
+                    <option value="yellow">Yellow (Medium)</option>
+                    <option value="green">Green (Low)</option>
+                </select>
+                <button type="submit">Add Expense</button>
+            </form>
+            <h2 class="banner">Expense List</h2>
+            <ul id="expenseList"></ul>
+        </section>
+        <aside class="right-column">
+            <h2 class="banner">Calculator</h2>
+            <iframe 
+                src="https://www.calculatorsoup.com/calculators/math/basic.php" 
+                frameborder="0"
+                scrolling="no"></iframe>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
