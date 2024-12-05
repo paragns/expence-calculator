@@ -7,34 +7,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark-mode">
-    <header>
-        <h1 id="totalAmount">Total: ₹0</h1>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
-    </header>
-    <main>
-        <section class="left-column">
-            <h2 class="banner">Add Expense</h2>
-            <form id="expenseForm">
-                <input type="text" id="description" placeholder="Description" required>
-                <input type="number" id="amount" placeholder="Amount" required>
-                <select id="flag">
-                    <option value="red">Red (High)</option>
-                    <option value="yellow">Yellow (Medium)</option>
-                    <option value="green">Green (Low)</option>
-                </select>
-                <button type="submit">Add Expense</button>
-            </form>
-            <h2 class="banner">Expense List</h2>
-            <ul id="expenseList"></ul>
-        </section>
-        <aside class="right-column">
-            <h2 class="banner">Calculator</h2>
-            <iframe 
-                src="https://www.calculatorsoup.com/calculators/math/basic.php" 
-                frameborder="0"
-                scrolling="no"></iframe>
-        </aside>
-    </main>
+    <div id="app">
+        <header>
+            <h1>Expense Tracker</h1>
+            <div id="total-display">
+                <h2>Total: ₹<span id="total-amount">0</span></h2>
+                <h3>Red Total: ₹<span id="red-total">0</span></h3>
+                <h3>Yellow Total: ₹<span id="yellow-total">0</span></h3>
+                <h3>Green Total: ₹<span id="green-total">0</span></h3>
+            </div>
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        </header>
+
+        <main>
+            <section id="expense-section">
+                <h2>Add Expense</h2>
+                <form id="expense-form">
+                    <input type="text" id="expense-name" placeholder="Expense Name" required>
+                    <input type="number" id="expense-amount" placeholder="Amount" required>
+                    <select id="expense-flag">
+                        <option value="green">Green</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="red">Red</option>
+                    </select>
+                    <button type="submit">Add Expense</button>
+                </form>
+
+                <ul id="expense-list">
+                    <!-- Expenses will be dynamically added here -->
+                </ul>
+            </section>
+
+            <section id="calculator-section">
+                <h2>Calculator</h2>
+                <div id="calculator">
+                    <input type="text" id="calc-display" disabled>
+                    <div id="calc-buttons">
+                        <button>7</button><button>8</button><button>9</button><button>/</button>
+                        <button>4</button><button>5</button><button>6</button><button>*</button>
+                        <button>1</button><button>2</button><button>3</button><button>-</button>
+                        <button>0</button><button>.</button><button>=</button><button>+</button>
+                        <button id="calc-clear">C</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
